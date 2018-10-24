@@ -1,0 +1,21 @@
+package bitcamp.java106.pms;
+
+import bitcamp.java106.pms.domain.Team;
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner KeyScan = new Scanner(System.in);
+        
+        while (true) {
+            System.out.print("명령> ");
+            String input = KeyScan.nextLine();
+            
+            if (input.toLowerCase().equals("quit")) {
+                System.out.println("Bye!");
+                break;
+            }
+            System.out.println(input);
+        }
+    }
+}
