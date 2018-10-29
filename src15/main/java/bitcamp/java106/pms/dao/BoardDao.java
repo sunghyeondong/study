@@ -7,7 +7,7 @@ public class BoardDao {
     int boardIndex = 0;
     
     public void insert(Board board) {
-        board.setNo(boardIndex);
+        board.no = boardIndex;
         this.boards[this.boardIndex++] = board;
     }
     
@@ -25,7 +25,7 @@ public class BoardDao {
     }
     
     public void update(Board board) {
-        boards[board.getNo()] = board;
+        boards[board.no] = board;
     }
     
     public void delete(int i) {
@@ -33,7 +33,6 @@ public class BoardDao {
     }
 }
 
-// ver 16 - Board 인스턴스 변수를 직접 사용하는 대신 겟터, 셋터 사용
 // ver 14 - BoardController로부터 데이터 관리 기능을 분리하여 BoardDao 생성.
 
 

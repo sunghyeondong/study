@@ -39,7 +39,7 @@ public class App {
         TeamMemberController teamMemberController = new TeamMemberController(keyScan, teamDao, memberDao);
         MemberController memberController = new MemberController(keyScan, memberDao);
         BoardController boardController = new BoardController(keyScan);
-        
+
         Console.keyScan = keyScan;
 
         while (true) {
@@ -65,7 +65,7 @@ public class App {
                 memberController.service(menu, option);
             } else if (menu.startsWith("board/")) {
                 boardController.service(menu, option);
-            } else {
+            }else {
                 System.out.println("명령어가 올바르지 않습니다.");
             }
 
@@ -73,6 +73,3 @@ public class App {
         }
     }
 }
-
-// ver 15 - TeamDao와 MemberDao 객체 생성. 
-//          팀 멤버를 다루는 메뉴 추가.
